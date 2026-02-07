@@ -34,12 +34,15 @@ label {
     font-weight: bold;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"], /* email 타입 추가 */
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-top: 5px; /* label과 간격 */
 }
 
 button {
@@ -137,11 +140,17 @@ body.dark-theme h1 {
     color: #eee;
 }
 
+body.dark-theme h2 { /* 새로 추가된 h2 스타일 */
+    color: #eee;
+}
+
 body.dark-theme .form-group label {
     color: #eee;
 }
 
-body.dark-theme input[type="text"] {
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"], /* email 타입 추가 */
+body.dark-theme textarea { /* textarea 스타일 */
     background-color: #666;
     color: #eee;
     border: 1px solid #777;

@@ -64,3 +64,94 @@ button:hover {
     padding: 10px; /* Add some padding for better visual */
     border-radius: 5px; /* Slightly round the corners */
 }
+
+/* Theme Switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark Mode */
+body.dark-theme {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme .container {
+    background-color: #555;
+    color: #eee;
+}
+
+body.dark-theme h1 {
+    color: #eee;
+}
+
+body.dark-theme .form-group label {
+    color: #eee;
+}
+
+body.dark-theme input[type="text"] {
+    background-color: #666;
+    color: #eee;
+    border: 1px solid #777;
+}
+
+body.dark-theme button {
+    background-color: #0056b3;
+}
+
+body.dark-theme .consultation-heading {
+    color: #eee; /* 다크 모드에서는 글자색을 밝게 */
+    background-color: #222; /* 다크 모드에서는 배경색을 어둡게 */
+}
